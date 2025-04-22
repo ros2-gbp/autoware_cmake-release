@@ -1,0 +1,12 @@
+Source: ros-kilted-autoware-cmake
+Section: misc
+Priority: optional
+Maintainer: Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake-auto, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-autoware-lint-common <!nocheck>, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-autoware-cmake
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-ament-cmake-auto, ros-kilted-ament-lint-auto, ros-kilted-ros-environment, ros-kilted-ros-workspace
+Description: CMake scripts for Autoware
