@@ -1,0 +1,24 @@
+ros-kilted-autoware-lint-common (1.0.2-2noble) noble; urgency=high
+
+
+
+ -- Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>  Tue, 08 Apr 2025 05:00:00 -0000
+
+ros-kilted-autoware-lint-common (1.0.1-2noble) noble; urgency=high
+
+  * fix(autoware_cmake): fix links to issues in CHANGELOG.rst files (#13 <https://github.com/autowarefoundation/autoware_cmake/issues/13>)
+  * Contributors: Esteve Fernandez
+
+ -- Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>  Mon, 17 Mar 2025 05:00:00 -0000
+
+ros-kilted-autoware-lint-common (1.0.0-2noble) noble; urgency=high
+
+  * Merge pull request #1 <https://github.com/autowarefoundation/autoware_cmake/issues/1> from youtalk/import-from-autoware-common
+    feat: import from autoware_common
+  * Merge branch 'autoware-lint-common' into import-from-autoware-common
+  * move to autoware_lint_common
+  * Contributors: Yutaka Kondo
+
+ -- Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>  Thu, 02 May 2024 05:00:00 -0000
+
+
