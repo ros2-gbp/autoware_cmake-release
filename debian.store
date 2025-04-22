@@ -1,1 +1,1 @@
-{"base": "267d2fb", "parent": "debian/rolling/autoware_cmake", "previous": "bb90643", "trim": "", "trimbase": ""}
+{"base": "bd7eac407b1c", "parent": "debian/kilted/autoware_cmake", "previous": "6caeb80bb1d3", "trim": "", "trimbase": ""}
