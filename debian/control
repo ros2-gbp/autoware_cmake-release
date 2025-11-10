@@ -1,0 +1,12 @@
+Source: ros-rolling-autoware-lint-common
+Section: misc
+Priority: optional
+Maintainer: Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake-core, ros-rolling-ament-cmake-export-dependencies, ros-rolling-ament-cmake-test, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-autoware-lint-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-ament-cmake-copyright, ros-rolling-ament-cmake-core, ros-rolling-ament-cmake-cppcheck, ros-rolling-ament-cmake-lint-cmake, ros-rolling-ament-cmake-test, ros-rolling-ament-cmake-xmllint, ros-rolling-ros-workspace
+Description: The list of commonly used linters in Autoware
