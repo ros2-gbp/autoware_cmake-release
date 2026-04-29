@@ -1,0 +1,12 @@
+Source: ros-lyrical-autoware-lint-common
+Section: misc
+Priority: optional
+Maintainer: Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake-core, ros-lyrical-ament-cmake-export-dependencies, ros-lyrical-ament-cmake-test, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/autoware_lint_common/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-autoware-lint-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-ament-cmake-copyright, ros-lyrical-ament-cmake-core, ros-lyrical-ament-cmake-cppcheck, ros-lyrical-ament-cmake-lint-cmake, ros-lyrical-ament-cmake-test, ros-lyrical-ament-cmake-xmllint, ros-lyrical-ros-workspace
+Description: The list of commonly used linters in Autoware
