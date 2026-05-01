@@ -1,1 +1,1 @@
-{"base": "087c72f324a1", "parent": "debian/rolling/autoware_lint_common", "previous": "43b382289b86", "trim": "", "trimbase": ""}
+{"base": "4f875de", "parent": "debian/rolling/autoware_lint_common", "previous": "88d6e8a", "trim": "", "trimbase": ""}
