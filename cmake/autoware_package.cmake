@@ -37,6 +37,11 @@ macro(autoware_package)
   # Ignore Boost deprecated messages
   add_compile_definitions(BOOST_ALLOW_DEPRECATED_HEADERS)
 
+  # PCL 1.14 propagates -fopenmp globally, causing Eigen
+  # to spin-wait with OpenMP threads and starve other callbacks.
+  # cspell:ignore DEIGEN DONT
+  add_compile_definitions(EIGEN_DONT_PARALLELIZE)
+
   # Ignore unnecessary CMake warnings
   set(__dummy__ ${CMAKE_EXPORT_COMPILE_COMMANDS})
 
@@ -54,22 +59,6 @@ macro(autoware_package)
 
   # Find dependencies
   find_package(ament_cmake_auto REQUIRED)
-
-  # TODO(youtalk): Remove this workaround once https://github.com/autowarefoundation/autoware_universe/issues/10410 is fixed
-  find_package(TinyXML2 CONFIG QUIET)
-  if(NOT TinyXML2_FOUND)
-    find_path(TINYXML2_INCLUDE_DIR NAMES tinyxml2.h)
-    find_library(TINYXML2_LIBRARY tinyxml2)
-    include(FindPackageHandleStandardArgs)
-    find_package_handle_standard_args(TinyXML2 DEFAULT_MSG TINYXML2_LIBRARY TINYXML2_INCLUDE_DIR)
-    mark_as_advanced(TINYXML2_INCLUDE_DIR TINYXML2_LIBRARY)
-    if(NOT TARGET tinyxml2::tinyxml2)
-      add_library(tinyxml2::tinyxml2 UNKNOWN IMPORTED)
-      set_property(TARGET tinyxml2::tinyxml2 PROPERTY IMPORTED_LOCATION ${TINYXML2_LIBRARY})
-      set_property(TARGET tinyxml2::tinyxml2 PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${TINYXML2_INCLUDE_DIR})
-      list(APPEND TinyXML2_TARGETS tinyxml2::tinyxml2)
-    endif()
-  endif()
 
   ament_auto_find_build_dependencies()
 
